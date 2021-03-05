@@ -5,6 +5,8 @@ import UserLoader from './components/UsersLoader';
 import WindowSizes from './components/WindowSizes';
 import Context from './components/Context';
 import { MyContext } from './components/contexsts';
+import LoginPage from './components/Pages/LoginPage';
+import SignUpPage from './components/Pages/SignUpPage';
 
 class App extends Component {
   constructor (props) {
@@ -27,24 +29,21 @@ class App extends Component {
           <nav>
             <ul>
               <li>
-                <Link to='/'>Home</Link>
+                <Link to='/'>login</Link>
               </li>
               <li>
-                <Link to='/windowSizes'>About</Link>
+                <Link to='/signUp'>Sign-up</Link>
               </li>
-
-              <li>
-                <Link to='/context'>Context</Link>
-              </li>
+             
             </ul>
           </nav>
 
           <Switch>
             <Route exact path='/'>
-              <UserLoader />
+              <LoginPage />
             </Route>
-            <Route path='/windowSizes'>
-              <WindowSizes />
+            <Route path='/signUp'>
+              <SignUpPage />
             </Route>
             <MyContext.Provider value={this.state.user}>
               <Route path='/context'>
