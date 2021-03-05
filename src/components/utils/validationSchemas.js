@@ -8,10 +8,8 @@ export const EMAIL_SCHEMA = Yup.string()
   .email('Test check for email')
   .required();
 
-export const PASSWORD_SCHEMA = Yup.string(
-  /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/
-)
-  .matches()
+export const PASSWORD_SCHEMA = Yup.string()
+  .matches(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/)
   .required();
 
 export const SIGN_UP_SCHEMA = Yup.object({
