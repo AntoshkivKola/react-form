@@ -26,3 +26,8 @@ export const SIGN_UP_SCHEMA = Yup.object({
     'Passwords must match'
   ),
 });
+
+export const LOGIN_SCHEMA = Yup.object({
+  email: EMAIL_SCHEMA,
+  password: PASSWORD_SCHEMA,
+})
