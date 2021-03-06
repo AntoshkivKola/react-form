@@ -34,27 +34,24 @@ class App extends Component {
               <li>
                 <Link to='/signUp'>Sign-up</Link>
               </li>
-             
             </ul>
           </nav>
 
           <Switch>
-            <Route exact path='/'>
-              <LoginPage />
-            </Route>
-            <Route path='/signUp'>
-              <SignUpPage />
-            </Route>
-            <MyContext.Provider value={this.state.user}>
-              <Route path='/context'>
-                <Context />
-              </Route>
-            </MyContext.Provider>
+            <Route exact path='/' component={LoginPage} />
+      
+            <Route path='/signUp' component={SignUpPage} />
           </Switch>
         </Router>
       </>
     );
   }
 }
+
+/* <MyContext.Provider value={this.state.user}>
+<Route path='/context'>
+  <Context />
+</Route>
+</MyContext.Provider> */
 
 export default App;
