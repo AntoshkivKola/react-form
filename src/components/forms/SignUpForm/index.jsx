@@ -11,7 +11,6 @@ const initialValues = {
 };
 
 const SignUpForm = props => {
- 
   return (
     <Formik
       initialValues={initialValues}
@@ -22,9 +21,8 @@ const SignUpForm = props => {
         console.log(formikProps);
         return (
           <Form>
-           <Input name="email" />
-            <Field name='password' type='password' />
-            <ErrorMessage name='password' component='span' />
+            <Input name='email' type='email' placeholder='Email' />
+            <Input name='password' type='password' placeholder='Password'/>
             <Field type='submit' value='submit' />
           </Form>
         );

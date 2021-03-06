@@ -1,0 +1,35 @@
+.input {
+  padding: 10px 5px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.validInput {
+  border-color: green;
+}
+
+.errorInput {
+  border-color: red;
+}
+
+.label {
+  position: relative;
+}
+.errorMessage {
+  position: absolute;
+  left: 0;
+  top: 210%;
+  padding:5px 15px;
+  border: 2px solid red;
+  border-radius: 5px;
+}
+.errorMessage::before {
+  content: '';
+  position: inherit;
+  top:-10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 7.5px 10px 7.5px;
+  border-color: transparent transparent red transparent;
+}
