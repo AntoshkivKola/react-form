@@ -1,0 +1,54 @@
+@import '../../common/styles/variables';
+.form {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.joinRadioButton {
+  align-self: stretch;
+  display: flex;
+  text-align: left;
+  cursor: pointer;
+  border: 1px solid $main-text-color;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  color: $main-text-color;
+  & p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+}
+.containerRadioButton {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  & > input {
+    margin-top: 20px;
+  }
+  & > h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+}
+
+.submit {
+  align-self: stretch;
+
+  background-color: rgb(40, 210, 208);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 20px 0;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: $main-text-color;
+}

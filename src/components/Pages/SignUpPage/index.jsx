@@ -1,21 +1,29 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
+import Header from '../../Header';
 import styles from './SignUpPage.module.scss';
 import SignUpForm from '../../forms/SignUpForm';
 
-
-
 const SignUpPage = props => {
   const onSubmit = (values, formikBag) => {
-    console.log(values);
-    console.log(formikBag);
     formikBag.resetForm();
   };
 
-
   return (
-   <SignUpForm onSubmit={onSubmit}/>
+    <div className={styles.main}>
+      <Header location={props.location} />
+      <div className={styles.container}>
+        <h1 className={styles.title}>CREATE AN ACCOUNT</h1>
+        <p className={styles.info}>
+          We always keep your name and email address private.
+        </p>
+        <SignUpForm onSubmit={onSubmit} />
+        <p className={styles.warning}>
+          By clicking this button, you agree to our{' '}
+          <a href='#'>Terms of Service.</a>
+        </p>
+      </div>
+    </div>
   );
 };
 

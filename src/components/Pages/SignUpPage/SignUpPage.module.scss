@@ -1,0 +1,29 @@
+@import '../../common/styles/variables';
+.main {
+  background-color: $main-bg-color;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: $main-text-color;
+  & a{
+    color:inherit;
+  }
+}
+.title {
+  text-transform: uppercase;
+  font-size: 2.7rem;
+}
+.info {
+  padding: 0 60px;
+  font-size: 1.3rem;
+  font-weight: 450;
+}
+.warning{
+  font-size: 1.1rem;
+  font-weight: 400;
+}

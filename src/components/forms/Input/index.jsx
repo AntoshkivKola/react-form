@@ -19,7 +19,11 @@ const Input = ({ name, ...rest }) => {
           );
         }}
       </Field>
-      <ErrorMessage className={styles.errorMessage} name={name} component='span' />
+      <ErrorMessage
+        className={styles.errorMessage}
+        name={name}
+        component='span'
+      />
     </label>
   );
 };
