@@ -26,20 +26,9 @@ class App extends Component {
     return (
       <>
         <Router>
-          <nav>
-            <ul>
-              <li>
-                <Link to='/'>login</Link>
-              </li>
-              <li>
-                <Link to='/signUp'>Sign-up</Link>
-              </li>
-            </ul>
-          </nav>
-
           <Switch>
             <Route exact path='/' component={LoginPage} />
-      
+
             <Route path='/signUp' component={SignUpPage} />
           </Switch>
         </Router>
