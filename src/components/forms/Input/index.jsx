@@ -4,12 +4,13 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import cx from 'classnames';
 import styles from './Input.module.scss';
 
-const Input = ({ name, ...rest }) => {
+const Input = ({ name,fullSize, ...rest }) => {
   return (
     <label className={styles.label}>
       <Field name={name}>
         {({ field, form, meta }) => {
           const classNames = cx(styles.input, {
+            [styles.fullSizeInput]: fullSize,
             [styles.validInput]: meta.touched && !meta.error,
             [styles.errorInput]: meta.touched && meta.error,
           });

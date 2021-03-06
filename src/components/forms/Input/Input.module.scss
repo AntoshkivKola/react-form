@@ -1,12 +1,16 @@
+@import '../../common/styles/variables';
+
+.fullSizeInput{
+  min-width: $form-max-width;
+}
 .input {
   padding: 20px;
   border: 2px solid transparent;
   border-radius: 5px;
   margin: 10px 0;
-  font-size: 1.2rem
+  font-size: 1.2rem;
 }
-.input:focus{
-  
+.input:focus {
   outline: none;
 }
 
@@ -26,7 +30,7 @@
   position: absolute;
   left: 0;
   top: 97%;
-  padding:5px 15px;
+  padding: 5px 15px;
   border: 2px solid red;
   background-color: rgb(243, 143, 136);
   border-radius: 5px;
@@ -34,7 +38,7 @@
 .errorMessage::before {
   content: '';
   position: inherit;
-  top:-10px;
+  top: -10px;
   width: 0;
   height: 0;
   border-style: solid;
