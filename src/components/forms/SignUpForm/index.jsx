@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { SIGN_UP_SCHEMA } from '../../utils/validationSchemas.js';
-import styles from './SignUpForm.module.scss';
+import styles from '../forms.module.scss';
 import Input from '../Input/index.jsx';
 
 const initialValues = {
