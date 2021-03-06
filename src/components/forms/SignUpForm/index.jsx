@@ -23,6 +23,7 @@ const SignUpForm = props => {
           <Form>
             <Input name='email' type='email' placeholder='Email' />
             <Input name='password' type='password' placeholder='Password'/>
+            <Input name='passwordConfirmation' type='password' placeholder='Password confirm'/>
             <Field type='submit' value='submit' />
           </Form>
         );
