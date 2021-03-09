@@ -10,6 +10,10 @@ import RadioGroup from 'components/forms/RadioGroup';
 const initialValues = {
   email: '',
   password: '',
+  firstName: '',
+  lastName: '',
+  dispalyName: '',
+  passwordConfirmation: '',
 };
 
 const SignUpForm = props => {
@@ -43,10 +47,10 @@ const SignUpForm = props => {
           description='I am looking for a Name, Logo or Tagline for my business, brand or
               product.'
         />
-         <RadioGroup
+        <RadioGroup
           name='picked'
           value={INPUR_RADIO_VALUES.CREATIVE}
-          title='Join As a Creative or Marketplace Seller<'
+          title='Join As a Creative or Marketplace Seller'
           description='I plan to submit name ideas, Logo designs or sell names in Domain
           Marketplace.'
         />
