@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, Field } from 'formik';
 import { SIGN_UP_SCHEMA } from 'utils/validationSchemas.js';
 import styles from 'components/forms/forms.module.scss';
 import Input from 'components/forms/Input';
+import { INPUR_RADIO_VALUES } from 'constants.js';
+import RadioGroup from 'components/forms/RadioGroup';
 
 const initialValues = {
   email: '',
@@ -34,32 +36,28 @@ const SignUpForm = props => {
             placeholder='Password confirm'
           />
         </div>
-        <label className={styles.joinRadioButton}>
-          <Field type='radio' name='picked' value='Buyer' />
-          <div className={styles.containerRadioButton}>
-            <h3>Join As a Buyer</h3>
-            <p>
-              I am looking for a Name, Logo or Tagline for my business, brand or
-              product.
-            </p>
-          </div>
-        </label>
-        <label className={styles.joinRadioButton}>
-          <Field type='radio' name='picked' value='Creative' />
-          <div className={styles.containerRadioButton}>
-            <h3>Join As a Creative or Marketplace Seller</h3>
-            <p>
-              I plan to submit name ideas, Logo designs or sell names in Domain
-              Marketplace.
-            </p>
-          </div>
-        </label>
+        <RadioGroup
+          name='picked'
+          value={INPUR_RADIO_VALUES.BUYER}
+          title='Join As a Buyer'
+          description='I am looking for a Name, Logo or Tagline for my business, brand or
+              product.'
+        />
+         <RadioGroup
+          name='picked'
+          value={INPUR_RADIO_VALUES.CREATIVE}
+          title='Join As a Creative or Marketplace Seller<'
+          description='I plan to submit name ideas, Logo designs or sell names in Domain
+          Marketplace.'
+        />
         <Field className={styles.submit} type='submit' value='Create account' />
       </Form>
     </Formik>
   );
 };
 
-SignUpForm.propTypes = {};
+SignUpForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default SignUpForm;
