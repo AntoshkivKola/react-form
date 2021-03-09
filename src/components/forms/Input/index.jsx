@@ -29,6 +29,10 @@ const Input = ({ name,fullSize, ...rest }) => {
   );
 };
 
-Input.propTypes = {};
+Input.propTypes = {
+  name: PropTypes.string.isRequired,
+  fullSize: PropTypes.bool,
+  
+};
 
 export default Input;
