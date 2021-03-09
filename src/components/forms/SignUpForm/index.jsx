@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { SIGN_UP_SCHEMA } from '../../utils/validationSchemas.js';
-import styles from '../forms.module.scss';
-import Input from '../Input/index.jsx';
+import { SIGN_UP_SCHEMA } from 'utils/validationSchemas.js';
+import styles from 'components/forms/forms.module.scss';
+import Input from 'components/forms/Input';
 
 const initialValues = {
   email: '',

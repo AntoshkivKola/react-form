@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from '../forms.module.scss';
+import styles from 'components/forms/forms.module.scss';
 
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { LOGIN_SCHEMA } from '../../utils/validationSchemas.js';
-import Input from '../Input';
+import { Formik, Form, Field } from 'formik';
+import { LOGIN_SCHEMA } from 'utils/validationSchemas.js';
+import Input from 'components/forms/Input';
 
 const initialValues = {
   email: '',

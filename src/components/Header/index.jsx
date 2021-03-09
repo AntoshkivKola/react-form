@@ -18,6 +18,8 @@ const Header = props => {
   );
 };
 
-Header.propTypes = {};
+Header.propTypes = {
+  location: PropTypes.object.isRequired,
+};
 
 export default Header;

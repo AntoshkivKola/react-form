@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import styles from '../SignUpPage/SignUpPage.module.scss';
-
-import Header from '../../Header';
-import LoginForm from '../../forms/LoginForm';
+import React from 'react';
+import styles from 'Pages/Pages.module.scss';
+import Header from 'components/Header';
+import LoginForm from 'components/forms/LoginForm';
 const LoginPage = props => {
   const onSubmit = (values, formikBag) => {
-    formikBag.resetForm();
+    console.log(values)
   };
   return (
     <div className={styles.main}>
@@ -19,7 +17,5 @@ const LoginPage = props => {
     </div>
   );
 };
-
-LoginPage.propTypes = {};
 
 export default LoginPage;

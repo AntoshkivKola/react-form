@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import Header from '../../Header';
-import styles from './SignUpPage.module.scss';
-import SignUpForm from '../../forms/SignUpForm';
+import Header from 'components/Header';
+import styles from 'Pages/Pages.module.scss';
+import SignUpForm from 'components/forms/SignUpForm';
 
 const SignUpPage = props => {
   const onSubmit = (values, formikBag) => {
