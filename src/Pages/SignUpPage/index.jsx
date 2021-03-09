@@ -6,7 +6,7 @@ import SignUpForm from 'components/forms/SignUpForm';
 
 const SignUpPage = props => {
   const onSubmit = (values, formikBag) => {
-    formikBag.resetForm();
+    console.log(values)
   };
 
   return (
