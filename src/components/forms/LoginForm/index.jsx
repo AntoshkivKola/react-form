@@ -34,6 +34,8 @@ const LoginForm = props => {
   );
 };
 
-LoginForm.propTypes = {};
+LoginForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default LoginForm;
