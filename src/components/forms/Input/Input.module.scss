@@ -1,14 +1,18 @@
 @import 'common/styles/variables';
 
-.fullSizeInput{
-  min-width: $form-max-width;
+.fullSize {
+  min-width: 100%;
 }
+
 .input {
   padding: 20px;
   border: 2px solid transparent;
   border-radius: 5px;
   margin: 10px 0;
   font-size: 1.2rem;
+  @media screen and (max-width: $lg) {
+    min-width: 100%;
+  }
 }
 .input:focus {
   outline: none;
@@ -24,7 +28,11 @@
 
 .label {
   position: relative;
+  @media screen and (max-width: $lg) {
+    min-width: 100%;
+  }
 }
+
 .errorMessage {
   z-index: 2;
   position: absolute;
@@ -45,3 +53,5 @@
   border-width: 0 7.5px 10px 7.5px;
   border-color: transparent transparent red transparent;
 }
+
+
